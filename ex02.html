@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 02</title>
+</head>
+<body>
+    <script>
+        // 2) Dado a sequência de Fibonacci, onde se inicia por 0 e 1 e o próximo valor sempre será a soma dos 2 valores anteriores 
+        // (exemplo: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34...), escreva um programa na linguagem que desejar onde, informado um número,
+        //  ele calcule a sequência de Fibonacci e retorne uma mensagem avisando se o número informado pertence ou não a sequência.
+
+        // IMPORTANTE:
+        // Esse número pode ser informado através de qualquer entrada de sua preferência ou pode ser previamente definido no código                
+        let fibo = [];
+
+        function fibonacci(valor) {
+            let anterior = 0;
+            let atual = 1;
+            let proximo = 1;
+
+            for(let i = 0; i < valor; i++){
+                console.log(proximo)
+                anterior = atual + proximo;
+                atual = proximo;
+                proximo = anterior;
+
+                fibo.push(atual)
+            } 
+
+            fibo.forEach((item) => 
+            {
+                if( item === atual) {
+                    console.log(`Este numero ${item} pertece a fibonacci`)
+                }  
+            });
+        };
+
+    console.log(fibonacci(5))
+    console.log(fibo)
+    </script>
+</body>
+</html>
